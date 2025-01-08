@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { generateToken } from "../lib/utils";
-import User from "../models/user.model";
+import { generateToken } from "../lib/utils.js";
+import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
-import cloudinary from "../lib/cloudinary";
+import cloudinary from "../lib/cloudinary.js";
 
 export const signup = async (req: Request, res: Response) => {
   const { fullName, email, password } = req.body;
